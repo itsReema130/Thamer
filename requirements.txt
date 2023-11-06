@@ -3,7 +3,6 @@ asgiref==3.6.0
 caer==2.0.8
 colorama==0.4.6
 comtypes==1.1.14
-contourpy==1.1.1
 cycler==0.11.0
 dj-database-url==2.1.0
 Django==4.2.1
