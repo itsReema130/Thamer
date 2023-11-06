@@ -20,7 +20,7 @@ numpy==1.21.6
 opencv-contrib-python==4.8.0.76
 optional-django==0.1.0
 packaging==23.1
-pandas==2.1.1
+pandas==1.3.5
 Pillow==9.5.0
 postgres==4.0
 psycopg2==2.9.6
