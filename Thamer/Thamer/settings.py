@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-3*(vc$-8w_h^$(dg*07a$tapqdwtoxzf%38#x%-8*x$8yjt!98
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -77,10 +78,10 @@ WSGI_APPLICATION = 'Thamer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres', 
-        'USER': 'postgres',
-        'PASSWORD': '12345678',
-        'HOST': 'database-2.ciay42flqdly.eu-north-1.rds.amazonaws.com', 
+        'NAME': 'deb76i065um8tj', 
+        'USER': 'gsgrmzvjajgnau',
+        'PASSWORD': '01f64e3145a56caa8eab509dbd2ddf3fb8db462811f92b66c973b6d1298c3d54',
+        'HOST': 'ec2-34-202-53-101.compute-1.amazonaws.com', 
         'PORT': '5432',
     }
 }
@@ -120,8 +121,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-
+#STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT_URL = "/static/"
+django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
