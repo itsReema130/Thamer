@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicron Thamer.wsgi --log-file=-
+web: gunicron Thamer/Thamer.wsgi --log-file=-
